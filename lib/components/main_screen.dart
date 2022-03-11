@@ -13,12 +13,15 @@ class MainScreen extends StatelessWidget {
       body: Row(
         children: const [
           Expanded(
+            flex: 3,
             child: MyDrawer(),
           ),
           Expanded(
+            flex: 4,
             child: QuestionSelectionScreen(),
           ),
           Expanded(
+            flex: 7,
             child: QuestionAndAnswerScreen(),
           )
         ],

@@ -12,12 +12,24 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Responsive(
+        // this is what display for mobile screens
         mobile: Container(
           color: Colors.blueAccent,
         ),
-        tablet: Container(
-          color: Colors.teal,
+        // this is what display for tablet screens
+        tablet: Row(
+          children: const [
+            Expanded(
+              flex: 4,
+              child: QuestionSelectionScreen(),
+            ),
+            Expanded(
+              flex: 7,
+              child: QuestionAndAnswerScreen(),
+            )
+          ],
         ),
+        // this is what display for destop screens
         desktop: Row(
           children: const [
             Expanded(
